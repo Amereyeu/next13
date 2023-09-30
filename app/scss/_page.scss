@@ -1,9 +1,18 @@
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
   border: 1px solid red;
+
+  h2 {
+    font-family: $heading;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
