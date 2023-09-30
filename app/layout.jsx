@@ -1,5 +1,6 @@
+import Navbar from './components/Navbar'
 import './styles.scss'
-import { Inter } from 'next/font/google'
+
 
 
 export const metadata = {
@@ -10,7 +11,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+
+      <body >
+        <Navbar />
+        {children}</body>
     </html>
   )
 }
