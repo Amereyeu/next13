@@ -1,0 +1,12 @@
+@mixin break($breakpoint...) {
+  @if length($breakpoint) ==1 {
+    @media (min-width: nth($breakpoint, 1)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: nth($breakpoint, 1)) and (max-width: nth($breakpoint, 2)) {
+      @content;
+    }
+  }
+}
+
