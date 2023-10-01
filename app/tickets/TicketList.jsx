@@ -3,7 +3,7 @@ import Link from "next/link";
 async function getTickets() {
   const res = await fetch("http://localhost:4000/tickets", {
     next: {
-      revalidate: 30, // use 0 to opt out of using cache
+      revalidate: 30, 
     },
   });
 
@@ -11,6 +11,9 @@ async function getTickets() {
 }
 
 export default async function TicketList() {
+  // imitate delay
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const tickets = await getTickets();
 
   return (
@@ -32,4 +35,5 @@ export default async function TicketList() {
     </>
   );
 }
+
 
