@@ -18,8 +18,9 @@ function Navbar() {
       </div>
       <div className="links">
         <Link href="/">Home</Link>
-        <Link href="/tickets">Tickets</Link>
-        <Link href="/blog">Blog</Link>
+        <Link href="/tickets">JSON data</Link>
+        <Link href="/blog">Blog MD</Link>
+        <Link href="/blog-mdx">Blog MDX</Link>
         <Link href="/about">About</Link>
       </div>
     </nav>

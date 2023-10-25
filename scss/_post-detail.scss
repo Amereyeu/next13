@@ -72,6 +72,13 @@
     p {
       margin-bottom: 1rem;
     }
+
+    img {
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   &__categories {
@@ -183,6 +190,8 @@
     margin: 5rem auto;
     display: inherit;
     cursor: pointer;
+    width: 200px;
+    text-align: center;
 
     span {
       padding: 0.5rem 1rem;

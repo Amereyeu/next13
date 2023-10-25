@@ -5,7 +5,7 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
 import { format } from "date-fns";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const getPostContent = (slug) => {
   const folder = "posts/";
@@ -33,9 +33,11 @@ const PostPage = (props) => {
       <div className="detail__header">
         <h1 className="detail__header__title">{post.data.title}</h1>
       </div>
+      
       <article className="detail__content">
         <Markdown>{post.content}</Markdown>
       </article>
+
       <div className="detail__categories">
         <h2 className="detail__categories__header">Published in:</h2>
 
@@ -59,12 +61,10 @@ const PostPage = (props) => {
           </span>
         </div>
       </div>
-      <button
-        className="detail__button"
-        // onClick={() => router.back()}
-        aria-label="Back to articles">
+
+      <Link href="/blog/" className="detail__button">
         <span>Back to articles</span>
-      </button>
+      </Link>
     </div>
   );
 };
