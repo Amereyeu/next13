@@ -2,16 +2,15 @@ import Link from "next/link";
 
 const PostPreview = (props) => {
   return (
-    <div className="">
-      <p className="">{props.date}</p>
-
-      <Link href={`/blog/${props.slug}`}>
-        <h2 className="">{props.title}</h2>
-      </Link>
-      <p className="">{props.subtitle}</p>
+    <div className="item">
+      <h2 className="">
+        <Link href={`/blog/${props.slug}`}>{props.title}</Link>
+      </h2>
+      <h3 className="">{props.subtitle}</h3>
     </div>
   );
 };
 
 export default PostPreview;
+
 

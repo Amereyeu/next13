@@ -7,7 +7,7 @@ function Blog() {
     <PostPreview key={post.slug} {...post} />
   ));
 
-  return <div className="">{postPreviews}</div>;
+  return <div className="container">{postPreviews}</div>;
 }
 
 export default Blog;
