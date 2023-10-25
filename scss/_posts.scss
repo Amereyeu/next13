@@ -9,7 +9,7 @@
   max-width: 1000px;
   margin: 0 auto;
 
-  .item {
+  &__item {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -54,7 +54,7 @@
       @include arrowDown($color-orange, 4rem, 2rem);
       position: absolute;
       top: -80px;
-      left: calc( 50% - 32px );
+      left: calc(50% - 32px);
       transition: all 0.3s ease-in;
       transform: translateY(100%);
     }

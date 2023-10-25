@@ -1,0 +1,208 @@
+/*********************************************
+ * post detail page
+ *********************************************/
+
+.detail {
+  // max-width: 1000px;
+
+  &__header {
+    text-align: center;
+    color: $color-white;
+    padding: 30vh 20px;
+    position: relative;
+    background-color: $color-orange;
+
+    &__title {
+      color: $color-white;
+      font-family: $heading;
+      font-weight: 800;
+      line-height: 1.3em;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: -0.015em;
+      font-size: calc(12px + 5vw);
+    }
+  }
+
+  &__content {
+    display: flow-root;
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 1rem;
+
+    @include break($medium) {
+      margin: 3rem auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 1.813rem;
+    }
+    h2 {
+      font-size: 1.688rem;
+    }
+    h3 {
+      font-size: 1.563rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: 1.375rem;
+    }
+    h6 {
+      font-size: 1.313rem;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 1rem 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__categories {
+    padding: 40px;
+    position: relative;
+
+    @include break($medium) {
+      margin-top: 120px;
+    }
+
+    &__header {
+      font-size: clamp(1.5rem, 0.7727rem + 3.6364vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-align: left;
+      z-index: 10;
+      position: relative;
+      line-height: 0.6em;
+      pointer-events: none;
+      font-family: $heading;
+    }
+
+    &__content {
+      background-color: $color-orange;
+      padding: 50px;
+
+      &__link {
+        font-size: clamp(1.5rem, 0.9545rem + 2.7273vw, 3rem);
+        text-decoration: none;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: $heading;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 2px;
+          bottom: -4px;
+          left: 0;
+          background-color: $color-white;
+          transform: scaleX(0);
+          transition: transform 0.6s ease;
+        }
+
+        &:hover {
+          color: $color-white;
+
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      &__date {
+        position: absolute;
+        right: 0;
+        padding-right: 50px;
+        bottom: 34px;
+        font-size: clamp(1.5rem, 0.7727rem + 3.6364vw, 3.5rem);
+        font-family: $heading;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin-right: 2rem;
+          position: relative;
+
+          &:has(+ li) {
+            &::after {
+              content: "";
+              color: $color-white;
+              font-size: clamp(1.5rem, 0.7727rem + 3.6364vw, 3.5rem);
+              position: absolute;
+              top: 14px;
+              right: -20px;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: $color-primary;
+
+              @include break(600px) {
+                top: 18px;
+              }
+
+              @include break($medium) {
+                top: 23px;
+              }
+
+              @include break($large) {
+                top: 29px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    background: var(--bg);
+    border: none;
+    margin: 5rem auto;
+    display: inherit;
+    cursor: pointer;
+
+    span {
+      padding: 0.5rem 1rem;
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 0px solid;
+      outline: 1px solid;
+      outline-color: var(--text);
+      outline-offset: 0px;
+      transition: all 0.6s cubic-bezier(0.36, 0.63, 0.5, 0.73);
+
+      &:hover {
+        border: 1px solid $color-orange;
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 15px;
+        color: $color-orange;
+      }
+    }
+  }
+}
+
