@@ -1,22 +1,17 @@
-import React from "react";
 import Link from "next/link";
 
 function tagMaker(tagList) {
   let alphabetizedTags = tagList.sort();
   return (
-    <div className={`tag-container`}>
-      <ul>
-        {alphabetizedTags.map((tag) => (
-          <li key={`${tag}-link`}>
-            <Link
-              className="detail__categories__content__link"
-              href={`${tag}`}>
-              {tag}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {alphabetizedTags.map((tag) => (
+        <li key={`${tag}-link`}>
+          <Link className="detail__categories__content__link" href={`${tag}`}>
+            {tag}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
 
