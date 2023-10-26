@@ -96,7 +96,7 @@ export default function Post({ params }) {
           )} */}
 
           <span className="detail__categories__content__date">
-            {/* {format(new Date(props.frontMatter.date), "dd.MM.yyyy")} */}
+            {format(new Date(props.frontMatter.date), "dd.MM.yyyy")}
           </span>
         </div>
       </div>
