@@ -79,6 +79,20 @@
       margin: 0 auto;
       display: block;
     }
+
+    pre {
+      padding: 1rem;
+      background: #000000;
+      margin: 1rem;
+    }
+
+    .hljs {
+      background: none;
+    }
+
+    code {
+      color: blueviolet;
+    }
   }
 
   &__categories {
