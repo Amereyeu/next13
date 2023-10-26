@@ -7,6 +7,7 @@ import langHttp from "highlight.js/lib/languages/http";
 import langNginx from "highlight.js/lib/languages/nginx";
 import { format } from "date-fns";
 import Link from "next/link";
+import TagBlock from "@/components/Tags";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Button from "@/components/mdx/Button";
@@ -56,7 +57,8 @@ export async function generateMetadata({ params }) {
   return {
     title: blog.frontMatter.title,
     description: blog.frontMatter.description,
-    date: blog.frontMatter.date
+    date: blog.frontMatter.date,
+    tags: blog.frontMatter.tags,
   };
 }
 
@@ -81,19 +83,7 @@ export default function Post({ params }) {
         <h2 className="detail__categories__header">Published in:</h2>
 
         <div className="detail__categories__content">
-          {/* {data.post.categories.edges.length !== 0 && (
-            <ul>
-              {data.post.categories.edges.map((cat) => (
-                <li key={cat.node.id}>
-                  <Link
-                    className="detail__categories__content__link"
-                    href={`/blog/category/${cat.node.slug}`}>
-                    {cat.node.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )} */}
+          <TagBlock tags={props.frontMatter.tags} />
 
           <span className="detail__categories__content__date">
             {format(new Date(props.frontMatter.date), "dd.MM.yyyy")}
@@ -101,12 +91,10 @@ export default function Post({ params }) {
         </div>
       </div>
 
-      <Link href="/blog/" className="detail__button">
+      <Link href="/blog-mdx/" className="detail__button">
         <span>Back to articles</span>
       </Link>
     </div>
   );
 }
-
-
 
