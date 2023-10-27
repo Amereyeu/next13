@@ -5,12 +5,158 @@ date: "2021-08-17"
 tags: ["mdx"]
 ---
 
-
 # another post
 
-![image](/arrow.svg) 
+Here is a simple footnote[^1].
 
-> [!NOTE]
-> Highlights information that users should take into account, even when skimming.
+A footnote can also have multiple lines[^2].
 
-This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+[^1]: My reference.
+[^2]:
+    To add line breaks within a footnote, prefix new lines with 2 spaces.
+    This is a second line.
+
+new footnote[^3]
+
+[^3]: another reference
+
+:+1:
+
+more foot [^4]
+
+[^4]: woop woop
+
+**NOTE**: :red_circle: Source [here](//developer.run)
+
+:heart_decoration:
+
+![image](/arrow.svg)
+
+This sentence uses `$` delimiters to show math inline: $\sqrt{3x-1}+(1+x)^2$
+
+@octocat :+1: This PR looks great - it's ready to merge! :shipit:
+
+$ \sqrt{2^3} $
+
+$ this\_{is}^{inline} $
+
+```math
+w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}
+```
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
+
+$ w_t{t+1} $
+
+```math
+(a + b^2)(a - b^2)
+```
+
+```math
+m = \frac { m _ { 0 } } { \sqrt { 1 - v ^ { 2 } / c ^ { 2 } } }
+```
+
+$
+m = \frac{top}{bottom}
+$
+$
+\sqrt[3]{2^5}
+$
+
+| Symbol     | Script     |
+| ---------- | ---------- |
+| $\alpha$   | `\alpha`   |
+| $\Alpha$   | `\Alpha`   |
+| $\beta$    | `\beta`    |
+| $\Beta$    | `\Beta`    |
+| $\gamma$   | `\gamma`   |
+| $\Gamma$   | `\Gamma`   |
+| $\delta$   | `\delta`   |
+| $\Delta$   | `\Delta`   |
+| $\epsilon$ | `\epsilon` |
+| $\Epsilon$ | `\Epsilon` |
+| $\zeta$    | `\zeta`    |
+| $\Zeta$    | `\Zeta`    |
+| $\eta$     | `\eta`     |
+| $\Eta$     | `\Eta`     |
+| $\theta$   | `\theta`   |
+| $\Theta$   | `\Theta`   |
+| $\kappa$   | `\kappa`   |
+| $\Kappa$   | `\Kappa`   |
+| $\lambda$  | `\lambda`  |
+| $\Lambda$  | `\Lambda`  |
+| $\mu$      | `\mu`      |
+| $\Mu$      | `\Mu`      |
+| $\nu$      | `\nu`      |
+| $\Nu$      | `\Nu`      |
+| $\xi$      | `\xi`      |
+| $\Xi$      | `\Xi`      |
+| $\omicron$ | `\omicron` |
+| $\Omicron$ | `\Omicron` |
+| $\pi$      | `\pi`      |
+| $\Pi$      | `\Pi`      |
+| $\rho$     | `\rho`     |
+| $\Rho$     | `\Rho`     |
+| $\sigma$   | `\sigma`   |
+| $\Sigma$   | `\Sigma`   |
+| $\tau$     | `\tau`     |
+| $\Tau$     | `\Tau`     |
+| $\upsilon$ | `\upsilon` |
+| $\Upsilon$ | `\Upsilon` |
+| $\phi$     | `\phi`     |
+| $\Phi$     | `\Phi`     |
+| $\chi$     | `\chi`     |
+| $\Chi$     | `\Chi`     |
+| $\psi$     | `\psi`     |
+| $\Psi$     | `\Psi`     |
+| $\omega$   | `\omega`   |
+| $\Omega$   | `\Omega`   |
+
+| Symbol        | Example        | Script         |
+| ------------- | -------------- | -------------- |
+| $\sqrt{x}$    | $\sqrt{4}$     | `\sqrt{4}`     |
+| $\sqrt[x]{y}$ | $\sqrt[3]{27}$ | `\sqrt[3]{27}` |
+
+| Symbol   | Example                            | Script   |
+| -------- | ---------------------------------- | -------- |
+| $\cos$   | $\cos \beta = \frac{a}{c}$         | `\cos`   |
+| $\sin$   | $\sin \alpha = \frac{a}{c}$        | `\sin`   |
+| $\cot$   | $\cot \beta = \frac{a}{c}$         | `\cot`   |
+| $\tan$   | $\tan \alpha = \frac{a}{c}$        | `\tan`   |
+| $\lim$   | $\lim_{x\to\infty}(4)$             | `\lim`   |
+| $\to$    | $\lim_{x\to\infty}(4)$             | `\to`    |
+| $\infty$ | $\lim_{x\to\infty}(4)$             | `\infty` |
+| $\sum$   | $\sum_{n=0}^{\infty}\frac{3}{2^n}$ | `\sum`   |
+| $\int$   | $\int dx$                          | `\int`   |
+| $\log$   | $\log_{2}(8)$                      | `\log`   |
+
+| Symbol    | Script    |
+| --------- | --------- |
+| $x_{y+1}$ | `x_{y+1}` |
+| $x^2$     | `x^2`     |
+| $x_y^2$   | `x_y^2`   |
+
+| Symbol         | Example                   | Script                    |
+| -------------- | ------------------------- | ------------------------- |
+| $\frac{x}{y}$  | $\frac{(x+1)}{(x-1)}$     | `\frac{(x+1)}{(x-1)}`     |
+| $\binom{x}{y}$ | $\binom{n}{k}$            | `\binom{n}{k}`            |
+|                | $\frac{\frac{1}{x}}{x-1}$ | `\frac{\frac{1}{x}}{x-1}` |
+|                | $^5/_7$                   | `^5/_7`                   |
+
+| Symbol   | Example                       | Script   |
+| -------- | ----------------------------- | -------- |
+| $\le$    | $x \le 2$                     | `\le`    |
+| $\ge$    | $x \ge 5$                     | `\ge`    |
+| $\cdot$  | $2 \cdot 3$                   | `\cdot`  |
+| $\times$ | $2 \times 3$                  | `\times` |
+| $\div$   | $6 \div 2$                    | `\div`   |
+| $\bmod$  | $7 \bmod 2 = 1$               | `\bmod`  |
+| $\pm$    | $x = {-b \pm \sqrt{b^2-4ac}}$ | `\pm`    |
+| $\mp$    | $x = {-b \mp \sqrt{b^2-4ac}}$ | `\mp`    |
+
+$$\sum_{n=0}^{\infty}\frac{3}{2^n}$$
+
+$2 != 4$
+

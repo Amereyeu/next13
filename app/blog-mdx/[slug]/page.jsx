@@ -1,11 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+
 import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
-
+import emoji from "remark-emoji";
 import rehypeHighlight from "rehype-highlight";
+
 import langHttp from "highlight.js/lib/languages/http";
 import langNginx from "highlight.js/lib/languages/nginx";
 import { format } from "date-fns";
@@ -21,7 +23,7 @@ import "@/styles/highlight-js/atom.css";
 
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm, remarkMath],
+    remarkPlugins: [remarkGfm, remarkMath, emoji],
     rehypePlugins: [
       rehypeKatex,
       rehypeHighlight,
@@ -101,6 +103,7 @@ export default function Post({ params }) {
     </div>
   );
 }
+
 
 
 
