@@ -19,7 +19,7 @@ export default function Home() {
   });
 
   return (
-    <main className="">
+    <main>
       <div className="container">
         {blogs.map((blog) => (
           <div className="container__item">

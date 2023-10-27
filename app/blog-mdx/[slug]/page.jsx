@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import remarkGfm from "remark-gfm";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 import rehypeHighlight from "rehype-highlight";
 import langHttp from "highlight.js/lib/languages/http";
@@ -19,8 +21,9 @@ import "@/styles/highlight-js/atom.css";
 
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkMath],
     rehypePlugins: [
+      rehypeKatex,
       rehypeHighlight,
       { languages: { http: langHttp, nginx: langNginx } },
     ],
@@ -98,4 +101,6 @@ export default function Post({ params }) {
     </div>
   );
 }
+
+
 
