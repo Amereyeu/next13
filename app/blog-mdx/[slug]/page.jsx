@@ -7,7 +7,9 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import emoji from "remark-emoji";
 import rehypeHighlight from "rehype-highlight";
-
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import toc from "@jsdevtools/rehype-toc";
 import langHttp from "highlight.js/lib/languages/http";
 import langNginx from "highlight.js/lib/languages/nginx";
 import { format } from "date-fns";
@@ -26,6 +28,9 @@ const options = {
     remarkPlugins: [remarkGfm, remarkMath, emoji],
     rehypePlugins: [
       rehypeKatex,
+      rehypeAutolinkHeadings,
+      rehypeSlug,
+      toc,
       rehypeHighlight,
       { languages: { http: langHttp, nginx: langNginx } },
     ],
@@ -80,7 +85,7 @@ export default function Post({ params }) {
       <article className="detail__content">
         <MDXRemote
           source={props.content}
-          components={{ Button, Yt, a: CustomLink }}
+          components={{ Button, Yt }}
           options={options}
         />
       </article>
@@ -103,7 +108,5 @@ export default function Post({ params }) {
     </div>
   );
 }
-
-
 
 
