@@ -10,6 +10,8 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import toc from "@jsdevtools/rehype-toc";
+import rehypeExternalLinks from "rehype-external-links";
+
 import langHttp from "highlight.js/lib/languages/http";
 import langNginx from "highlight.js/lib/languages/nginx";
 import { format } from "date-fns";
@@ -31,8 +33,9 @@ const options = {
       rehypeAutolinkHeadings,
       rehypeSlug,
       toc,
+      [rehypeExternalLinks, { rel: ["nofollow"], target: ["_blank"] }],
       rehypeHighlight,
-      { languages: { http: langHttp, nginx: langNginx } },
+      // { languages: { http: langHttp, nginx: langNginx } },
     ],
   },
 };
@@ -108,5 +111,4 @@ export default function Post({ params }) {
     </div>
   );
 }
-
 
