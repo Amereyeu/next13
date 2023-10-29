@@ -100,7 +100,7 @@
     code {
       color: $color-orange;
       padding: 2px 4px;
-      background: rgb(228, 230, 232)
+      // background: rgb(228, 230, 232)
     }
 
     .iframe-container {
@@ -269,3 +269,26 @@
   }
 }
 
+table {
+  width: 500px;
+  margin: 30px auto;
+  color: #000;
+  border: 1px solid #000;
+  border-collapse: collapse;
+
+  td,
+  th {
+    _text-align: left;
+    padding: 0.1rem 1rem;
+  }
+
+  th {
+    background: #000;
+    color: #fff;
+    padding: 4px;;
+  }
+
+  tr:nth-child(odd) {
+    background: #eee;
+  }
+}
