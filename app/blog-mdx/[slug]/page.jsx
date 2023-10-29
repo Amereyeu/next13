@@ -21,7 +21,6 @@ import TagBlock from "@/components/Tags";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Button from "@/components/mdx/Button";
 import Yt from "@/components/mdx/Yt";
-import CustomLink from "@/components/mdx/CustomLink";
 
 import "@/styles/highlight-js/atom.css";
 

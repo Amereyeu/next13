@@ -2,8 +2,7 @@
  * navigation
  *********************************************/
 
-
-nav {
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,3 +22,80 @@ nav {
     }
   }
 }
+
+/*********************************************
+ * toc
+ *********************************************/
+
+.toc {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 40px;
+  max-width: 600px;
+  padding: 40px;
+
+  ol {
+    counter-reset: one two three four;
+
+    li:before {
+      counter-increment: one;
+      content: counter(one) ".";
+    }
+
+    ol {
+      counter-reset: two three four;
+
+      li:before {
+        counter-increment: two;
+        content: counter(one) "." counter(two);
+      }
+
+      ol {
+        counter-reset: three four;
+
+        li:before {
+          counter-increment: three;
+          content: counter(one) "." counter(two) "." counter(three);
+        }
+
+        ol {
+          counter-reset: four;
+
+          li:before {
+            counter-increment: four;
+            content: counter(one) "." counter(two) "." counter(three) "."
+              counter(four);
+          }
+        }
+      }
+    }
+  }
+
+  ol {
+    list-style: none;
+  }
+
+  li:before {
+    background: #f9f9f9;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  a {
+    color: #888;
+    font-size: 17px;
+    font-weight: normal;
+    margin-left: 4px;
+    text-decoration: none;
+    transition: all 0.2s linear 0s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+

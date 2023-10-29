@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className="navigation">
       <div className="logo">
         {/* <Image
           src={Logo}
