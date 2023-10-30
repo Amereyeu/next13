@@ -83,6 +83,10 @@
     font-weight: bold;
     padding: 5px;
     vertical-align: middle;
+    
+    &:hover {
+      color: #000;
+    }
   }
 
   a {
