@@ -1,0 +1,83 @@
+/*********************************************
+ * category list
+ *********************************************/
+
+.allcategories {
+  position: relative;
+  background-color: $color-orange;
+  padding: 50px;
+  // margin-top: 70px;
+
+  @include break($xlarge) {
+    margin-top: 90px;
+  }
+
+  &__link {
+    font-size: clamp(1.5rem, 0.9545rem + 2.7273vw, 3rem);
+    text-decoration: none;
+    color: $color-white;
+    text-transform: uppercase;
+    font-family: $heading;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: $color-white;
+      transform: scaleX(0);
+      transition: transform 0.6s ease;
+    }
+
+    &:hover {
+      color: $color-white;
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 2rem;
+      position: relative;
+
+      &:has(+ li) {
+        &::after {
+          content: "";
+          color: $color-white;
+          font-size: clamp(1.5rem, 0.7727rem + 3.6364vw, 3.5rem);
+          position: absolute;
+          top: 14px;
+          right: -20px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $color-primary;
+
+          @include break(600px) {
+            top: 18px;
+          }
+
+          @include break($medium) {
+            top: 23px;
+          }
+
+          @include break($large) {
+            top: 29px;
+          }
+        }
+      }
+    }
+  }
+}
+

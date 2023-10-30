@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import CategoryList from "@/components/CategoryList";
 
 export default function Home() {
   const blogDir = "blogs";
@@ -19,20 +20,24 @@ export default function Home() {
   });
 
   return (
-    <main>
-      <div className="container">
-        {blogs.map((blog) => (
-          <div className="container__item">
-            <h2>
-              <Link href={`/blog-mdx/${blog.slug}`} passHref key={blog.slug}>
-                {blog.meta.title}
-              </Link>
-            </h2>
-            <h3>{blog.meta.description}</h3>
-          </div>
-        ))}
-      </div>
-    </main>
+    <>
+      <CategoryList />
+
+      <main>
+        <div className="container">
+          {blogs.map((blog) => (
+            <div className="container__item">
+              <h2>
+                <Link href={`/blog-mdx/${blog.slug}`} passHref key={blog.slug}>
+                  {blog.meta.title}
+                </Link>
+              </h2>
+              <h3>{blog.meta.description}</h3>
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
 
